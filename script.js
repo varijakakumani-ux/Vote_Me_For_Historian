@@ -2,9 +2,10 @@ const gallery = document.getElementById("gallery");
 
 // LOAD 43 IMAGES
 if (gallery) {
+  const imageFolder = './assets/images';
   for (let i = 1; i <= 43; i++) {
     const img = document.createElement("img");
-    img.src = `assets/images/photo${i}.jpg`;
+    img.src = `${imageFolder}/photo${i}.jpg`;
     img.classList.add("gallery-img");
     gallery.appendChild(img);
   }
@@ -29,5 +30,3 @@ if (closeBtn) {
 if (modal) {
   modal.onclick = () => modal.style.display = "none";
 }
-
-<div class="gallery" id="gallery"></div>
